@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Magical Birthday Journey</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Quicksand&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Background canvas -->
+  <canvas id="stars-bg"></canvas>
+
+  <!-- Welcome Page -->
+  <section class="welcome">
+    <h1 class="typewriter">Happy Birthday, Akanksha! 🎉</h1>
+    <button onclick="startJourney()">Begin Your Birthday Surprise ✨</button>
+  </section>
+
+  <!-- Memory Carousel -->
+  <section class="carousel hidden">
+    <h2>📸 Memory Lane</h2>
+    <div class="carousel-container">
+      <img src="images/photo1.png" class="carousel-img" alt="Memory 1"/>
+      <img src="images/photo2.png" class="carousel-img" alt="Memory 2"/>
+      <img src="images/photo3.png" class="carousel-img" alt="Memory 3"/>
+    </div>
+  </section>
+
+  <!-- 23 Reasons Section -->
+  <section class="reasons hidden">
+    <h2>💖 23 Reasons You're Amazing</h2>
+    <div id="reasons-list"></div>
+  </section>
+
+  <!-- Surprise Gift Section -->
+  <section class="surprise hidden">
+    <h2>🎁 A Little Surprise</h2>
+    <div class="gift-box" onclick="revealGift()">🎀 Click to Open</div>
+    <div id="gift-content" class="hidden">
+      <p>You are the best gift life ever gave me. Here's a message just for you 💌</p>
+      <audio controls>
+        <source src="audio/funny.mp3" type="audio/mp3"/>
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </section>
+
+  <!-- Birthday Cake Section -->
+  <section class="cake-section hidden">
+    <h2>🎂 Blow the Candle!</h2>
+    <div class="cake">
+      <div class="candle-flame"></div>
+    </div>
+    <button onclick="blowCandle()">Blow Candle 🕯️</button>
+  </section>
+
+  <!-- Secret Message Wall -->
+  <section class="secrets hidden">
+    <h2>💬 Our Secret Moments</h2>
+    <div class="secret-grid">
+      <div class="secret-card" data-msg="Remember that rainy day when we used to eat ice cream in the hostel? It was the best.">🌧️</div>
+      <div class="secret-card" data-msg="You make even the dullest moments sparkle.">✨</div>
+      <div class="secret-card" data-msg="Forever my favorite person.">💖</div>
+    </div>
+  </section>
+
+  <!-- Music + Script -->
+  <audio id="birthday-music" loop>
+    <source src="audio/happy-birthday.mp3" type="audio/mp3"/>
+  </audio>
+
+  <button id="music-toggle" title="Toggle music 🎵">🎵</button>
+  <script src="script.js"></script>
+  <footer class="birthday-footer">
+  Made with 💖 by <span class="my-name">Aneetta</span> — Happy Birthday!
+</footer>
+
+</body>
+</html>
